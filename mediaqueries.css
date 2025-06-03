@@ -1,3 +1,4 @@
+/* For screens up to 1400px wide */
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -8,10 +9,11 @@
   }
   #contact,
   #projects {
-    height: fit-content;
+    height: fit-content; /* fit-content is good here */
   }
 }
 
+/* For screens up to 1200px wide */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
@@ -25,17 +27,15 @@
   }
   #profile,
   .section-container {
-    display: block;
+    display: block; /* Good to switch from flex/grid to block for smaller screens */
   }
   .arrow {
     display: none;
   }
   section,
   .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
+    height: fit-content; /* lets sections adapt height to content */
+    margin: 0 5%; /* adding horizontal margin to sections */
   }
   .section__pic-container {
     width: 275px;
@@ -47,6 +47,7 @@
   }
 }
 
+/* For screens up to 600px wide */
 @media screen and (max-width: 600px) {
   #contact,
   footer {
@@ -75,7 +76,7 @@
   .nav-links li a {
     font-size: 1rem;
   }
-  .experience-sub-title {
+  .experience-subtitle {
     font-size: 1.25rem;
   }
   .logo {
@@ -87,8 +88,8 @@
     text-align: center;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: auto; /* width auto for fluid responsiveness */
+    height: 46vw; /* vw unit for relative height */
     justify-content: center;
   }
   .section__text__p2 {
