@@ -522,8 +522,10 @@ body.dark-mode .color-container {
 }
 
 .project-title {
-    margin: 1rem;
-    color: black;
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    /* margin-bottom: 2rem; */
 }
 
 body.dark-mode .project-title {
@@ -538,6 +540,12 @@ body.dark-mode .project-title {
 body.dark-mode .project-btn {
     color: #ddd;
     border-color: #444;
+}
+
+.project-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
 }
 
 /* Contact Section */
