@@ -2,7 +2,7 @@
 
 A responsive, modern personal portfolio website built with HTML, CSS, and JavaScript. Showcases my skills in Artificial Intelligence, Machine Learning, and Web Development.
 
-![Portfolio Screenshot](assets/preview.png)
+![Portfolio Screenshot](Assets/Preview.png)
 
 ## 🌐 Live Demo
 
