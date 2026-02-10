@@ -1,132 +1,90 @@
-# 💼 Pranjal Rimal's Developer Portfolio
+# Pranjal Rimal — Portfolio
 
-A responsive, modern personal portfolio website built with HTML, CSS, and JavaScript. Showcases my skills in Artificial Intelligence, Machine Learning, and Web Development.
+My personal portfolio website. Built with plain HTML, CSS and JavaScript — no frameworks, no build tools.
 
-![Portfolio Screenshot](Assets/Preview.png)
+![Preview](assets/images/Preview.png)
 
-## 🌐 Live Demo
-
-[🔗 Visit Portfolio](https://pranjalrimal.com.np)
+**Live:** [pranjalrimal.com.np](https://pranjalrimal.com.np)
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔁 Fully Responsive Layout
-- 🌙 Light/Dark Mode Toggle
-- 📱 Mobile-Friendly Hamburger Navigation
-- 💻 Clean, Minimal UI
-- 🔗 Social Media Integration with Adaptive Icons
-- 🧠 Sections: About, Experience, Projects, Contact
-- 🎯 Smooth Scroll Navigation
-
----
-
-## 📁 Sections Overview
-
-### 🧑‍💻 Profile
-Short introduction, social icons (LinkedIn, GitHub, LeetCode, Twitter, Instagram, Mail), and action buttons.
-
-### 📜 About
-Summary of background, education, and passion for AI/ML and full-stack web development.
-
-### 🛠️ Experience
-Skills represented with tech icons and clear layout — adapts to dark mode using invert and brightness filters.
-
-### 🧩 Projects
-Placeholder section for highlighting key projects with GitHub/demo links.
-
-### 📬 Contact
-Includes email and social media for direct communication.
-
-### 🔻 Footer
-Reinforces site navigation and branding with dark-mode-ready styling.
+- Dark / light mode with localStorage persistence
+- Responsive layout with mobile hamburger navigation
+- Typing effect on the hero headline
+- Scroll-triggered reveal animations
+- Minimal, monochrome design (Inter + JetBrains Mono)
+- No dependencies — just open `index.html`
 
 ---
 
-## 🌑 Dark Mode Support
-
-- Toggled via an icon in the navbar.
-- Icons and text automatically adapt using `filter: invert()` and `currentColor` techniques.
-- Smooth color transitions and consistent readability in both modes.
-
----
-
-## 🛠️ Tech Stack
-
-| Purpose         | Technology        |
-|-----------------|-------------------|
-| Structure       | HTML5             |
-| Styling         | CSS3              |
-| Interaction     | Vanilla JavaScript |
-| Fonts           | Google Fonts (Poppins) |
-| Icons/Images    | SVG, PNG (Dark Mode Compatible) |
-
----
-
-## 📂 Folder Structure
+## Project Structure
 
 ```
-Portfolio/
-├── index.html
-├── styles.css
-├── script.js
-├── mediaqueries.css
+├── index.html              # main page
+├── css/
+│   ├── styles.css          # design system, components, dark mode
+│   └── mediaqueries.css    # responsive breakpoints
+├── js/
+│   └── script.js           # theme toggle, typing effect, scroll reveals
 ├── assets/
-│   ├── arrow.png
-│   ├── checkmark.png
-│   ├── education.png
-│   ├── email.png
-│   ├── experience.png
-│   ├── github.svg
-│   ├── instagram.svg
-│   ├── leetcode.svg
-│   ├── linkedin.svg
-│   ├── Moon.svg
-│   ├── P2.jpg
-│   ├── Preview.png
-│   ├── profile-pic.png
-│   ├── project.png
-│   ├── resume.pdf
-│   ├── Sun.svg
-│   ├── X.svg
+│   ├── icons/              # social & UI svgs (github, linkedin, moon, sun…)
+│   ├── images/             # profile photo, project screenshots, preview
+│   └── docs/               # resume pdf
+├── CNAME                   # custom domain for GitHub Pages
 └── README.md
 ```
 
 ---
 
-## 📦 Installation
+## Run Locally
 
-To run the website locally:
+```bash
+git clone https://github.com/impranzal/Potrfolio.git
+cd Potrfolio
+```
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/impranzal/Potrfolio.git
-   ```
-
-2. Open `index.html` in your browser.
-
-That's it — no build tools or frameworks required.
+Open `index.html` in a browser. That's it.
 
 ---
 
-## 🎯 Customization
+## Tech
 
-- Replace social links and icons in the HTML.
-- Add projects to the Projects section.
-- Update styles or animations in `style.css` as desired.
-- Swap or edit SVGs in the `assets/` folder for a custom feel.
+| Layer        | What                          |
+|--------------|-------------------------------|
+| Structure    | HTML5                         |
+| Styling      | CSS3 (custom properties)      |
+| Scripting    | Vanilla JavaScript            |
+| Fonts        | Inter, JetBrains Mono         |
+| Icons        | SVG                           |
+| Hosting      | GitHub Pages                  |
+
+---
+
+## Sections
+
+- **Hero** — name, typing phrases, quick info card, resume download, socials
+- **About** — bio, education, stat cards
+- **Skills** — categorized skill tags (Core, AI/ML, Web, Tools)
+- **Projects** — numbered project rows with thumbnails
+- **Contact** — email, LinkedIn, GitHub cards
+- **Footer** — site nav + copyright
 
 ---
 
-## 📫 Contact
+## Customization
 
-Feel free to reach out:
-
-- 🔗 Website: [pranjalrimal.com.np](https://pranjalrimal.com.np)
-- 🐙 GitHub: [github.com/impranzal](https://github.com/impranzal)
-- 💼 LinkedIn: [linkedin.com/in/pranzal/](https://linkedin.com/in/pranzal/)
-- 📧 Email: [pranjalrimal.np@gmail.com](mailto:pranjalrimal.np@gmail.com)
+- Edit typing phrases in `js/script.js` → `typingPhrases` array
+- Swap colors via CSS custom properties in `:root` and `body.dark-mode`
+- Replace images in `assets/images/`, icons in `assets/icons/`
+- Update resume at `assets/docs/resume.pdf`
 
 ---
+
+## Contact
+
+- [pranjalrimal.com.np](https://pranjalrimal.com.np)
+- [github.com/impranzal](https://github.com/impranzal)
+- [linkedin.com/in/pranzal](https://linkedin.com/in/pranzal)
+- [pranjalrimal.np@gmail.com](mailto:pranjalrimal.np@gmail.com)

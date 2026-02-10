@@ -1,54 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="./Assets/profile-pic.png"
-      type="image/png"
-    />
-    <title>My Portfolio</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: sans-serif;
-        background: #000000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-      }
-      .container {
-        padding: 2rem;
-        background: rgb(21, 19, 19);
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-      }
-      h1 {
-        color: #ffffff;
-        margin-bottom: 1rem;
-        font-size: 2.5rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-      p {
-        color: #ffffff;
-        font-size: 1.2rem;
-        margin: 0.5rem 0;
-        line-height: 1.5;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Under Maintenance</h1>
-      <p>My portfolio is currently being updated. Please check back soon.</p>
-      <p>– Pranjal Rimal</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranjal Rimal</title>
+  <meta name="description" content="Pranjal Rimal — AI/ML Enthusiast &amp; Full-Stack Developer. Building intelligent systems with machine learning.">
+  <link rel="shortcut icon" href="./assets/images/profile-pic.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mediaqueries.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+
+  <!-- desktop navigation -->
+  <nav id="desktop-nav">
+    <a href="#profile" class="logo">Pranjal<span class="logo-dot">.</span></a>
+    <div class="nav-link">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Skills</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </body>
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+      <img id="theme-icon" src="./assets/icons/Moon.svg" alt="Theme toggle icon">
+    </button>
+  </nav>
+
+  <!-- mobile hamburger nav -->
+  <nav id="hamburger-nav">
+    <a href="#profile" class="logo">Pranjal<span class="logo-dot">.</span></a>
+    <button id="theme-toggle-mobile" aria-label="Toggle Dark Mode" onclick="setTheme(document.body.classList.contains('dark-mode') ? 'light' : 'dark')">
+      <img id="theme-icon-mobile" src="./assets/icons/Moon.svg" alt="Theme toggle icon">
+    </button>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <ul>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Work</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- hero section -->
+  <section id="profile" class="reveal">
+    <div class="hero-inner">
+
+      <div class="hero-avatar">
+        <img src="./assets/images/profile-pic.png" alt="Pranjal Rimal profile picture">
+      </div>
+
+      <h1 class="hero-headline">
+        Pranjal Rimal<br>
+        <span class="hero-accent" id="typed-text"></span><span class="cursor">|</span>
+      </h1>
+
+      <p class="hero-sub">
+        AI/ML Enthusiast & Full-Stack Developer based in Nepal,
+        turning complex problems into elegant, intelligent solutions.
+      </p>
+
+      <!-- quick info card -->
+      <div class="hero-info-row">
+        <div class="hero-info-block">
+          <span class="hero-info-label">Experience</span>
+          <span class="hero-info-value">Full-Stack Dev
+               AI/ML Engineer</span>
+        </div>
+        <div class="hero-info-divider"></div>
+        <div class="hero-info-block">
+          <span class="hero-info-label">Education</span>
+          <span class="hero-info-value">B.Sc. CSIT</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="window.open('./assets/docs/resume.pdf')">
+          Download Resume
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </button>
+        <button class="btn btn-ghost" onclick="location.href='#contact'">
+          Get In Touch
+        </button>
+      </div>
+
+      <!-- social links -->
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/pranzal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="./assets/icons/linkedin.svg" alt="LinkedIn" class="icon">
+        </a>
+        <a href="https://github.com/impranzal" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="./assets/icons/github.svg" alt="GitHub" class="icon">
+        </a>
+        <a href="https://www.instagram.com/_pranzalfr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="./assets/icons/instagram.svg" alt="Instagram" class="icon">
+        </a>
+        <a href="https://leetcode.com/profile/impranjal" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+          <img src="./assets/icons/leetcode.svg" alt="LeetCode" class="icon">
+        </a>
+        <a href="https://x.com/_pranzalfr" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <img src="./assets/icons/x.svg" alt="X" class="icon">
+        </a>
+      </div>
+
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </section>
+
+  <!-- about me -->
+  <section id="about" class="reveal">
+    <div class="section-header">
+      <span class="section-label">About</span>
+      <h2 class="section-title">A bit about me</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="./assets/images/P2.jpg" alt="Pranjal Rimal">
+      </div>
+
+      <div class="about-content">
+        <p class="about-text">
+          I'm Pranjal Rimal, an AI/ML enthusiast currently pursuing
+          B.Sc. CSIT at
+          <a href="https://texasintl.edu.np/" class="text-link" target="_blank">Texas International College</a>.
+          I'm deepening my expertise in artificial intelligence and machine learning
+          while honing my full-stack development skills.
+        </p>
+        <p class="about-text">
+          I love turning complex problems into elegant, intelligent solutions
+          and contributing to open-source projects that make a difference.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat-item reveal-card">
+            <span class="stat-number">4+</span>
+            <span class="stat-label">Skills Areas</span>
+          </div>
+          <div class="stat-item reveal-card">
+            <span class="stat-number">1+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-item reveal-card">
+            <span class="stat-number">B.Sc.</span>
+            <span class="stat-label">CSIT Student</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- skills -->
+  <section id="experience" class="reveal">
+    <div class="section-header">
+      <span class="section-label">Skills</span>
+      <h2 class="section-title">Technologies I work with</h2>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-category reveal-card">
+        <h3 class="skill-heading">Core Skills</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">Seaborn</span>
+          <span class="skill-tag">Scikit-Learn</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal-card">
+        <h3 class="skill-heading">AI/ML Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">Keras</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">Jupyter Notebook</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal-card">
+        <h3 class="skill-heading">Web Development</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Node.js</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal-card">
+        <h3 class="skill-heading">Tools & Platforms</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Docker</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- projects -->
+  <section id="projects" class="reveal">
+    <div class="section-header">
+      <span class="section-label">Work</span>
+      <h2 class="section-title">Selected projects</h2>
+    </div>
+
+    <div class="projects-list">
+
+      <!-- project 1 - brainbuddy -->
+      <a href="https://github.com/impranzal/brainBuddy" target="_blank" rel="noopener noreferrer" class="project-row reveal-card">
+        <div class="project-number">01</div>
+        <div class="project-img-wrapper">
+          <img src="./assets/images/brainbuddy.png" alt="BrainBuddy" class="project-img">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">BrainBuddy</h3>
+          <p class="project-subtitle">AI-Powered Learning Platform</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>AI/ML</span>
+            <span>Web</span>
+          </div>
+        </div>
+        <div class="project-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
+      <!-- project 2 -->
+      <a href="https://github.com/impranzal" target="_blank" rel="noopener noreferrer" class="project-row reveal-card">
+        <div class="project-number">02</div>
+        <div class="project-img-wrapper">
+          <img src="./assets/images/project.png" alt="Project Two" class="project-img">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Project Two</h3>
+          <p class="project-subtitle">Coming Soon</p>
+          <div class="project-tech">
+            <span>TBD</span>
+          </div>
+        </div>
+        <div class="project-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
+      <!-- project 3 -->
+      <a href="https://github.com/impranzal" target="_blank" rel="noopener noreferrer" class="project-row reveal-card">
+        <div class="project-number">03</div>
+        <div class="project-img-wrapper">
+          <img src="./assets/images/project.png" alt="Project Three" class="project-img">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Project Three</h3>
+          <p class="project-subtitle">Coming Soon</p>
+          <div class="project-tech">
+            <span>TBD</span>
+          </div>
+        </div>
+        <div class="project-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section id="contact" class="reveal">
+    <div class="section-header">
+      <span class="section-label">Contact</span>
+      <h2 class="section-title">Let's work together</h2>
+    </div>
+
+    <div class="contact-grid">
+
+      <a href="mailto:pranjalrimal.np@gmail.com" class="contact-block reveal-card">
+        <div class="contact-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <span class="contact-label">Email</span>
+        <span class="contact-value">pranjalrimal.np@gmail.com</span>
+      </a>
+
+      <a href="https://linkedin.com/in/pranzal" target="_blank" rel="noopener noreferrer" class="contact-block reveal-card">
+        <div class="contact-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">linkedin.com/in/pranzal</span>
+      </a>
+
+      <a href="https://github.com/impranzal" target="_blank" rel="noopener noreferrer" class="contact-block reveal-card">
+        <div class="contact-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </div>
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">github.com/impranzal</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">Pranjal<span class="logo-dot">.</span></span>
+      </div>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="current-year"></span> Pranjal Rimal</p>
+    </div>
+  </footer>
+
+</body>
 </html>
